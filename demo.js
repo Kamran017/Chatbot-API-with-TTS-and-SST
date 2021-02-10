@@ -61,18 +61,6 @@ function tts(text){
       if (err) throw err
       console.log(`Success! Open file ${tmpFile} to hear the result.`)
     })
-    // Stream Method
-    // app.get('/stream', (req, res) => {
-    // //   const { text, lang } = req.query
-    //   const gtts = new Gtts(text, lang)
-    //   gtts.stream().pipe(res)
-    // })
-    
-    // app.listen(PORT, (err) => {
-    //   if (err) throw err
-    //   console.log(`Server is running on port ${PORT}...`)
-    // })
-//    console.log( gtts.getPayload())
 }
 //speech to text function
 function sst(){
@@ -157,8 +145,6 @@ app.post('/sendRequest', async function (req, res) {
     var str=req.body["text"]
     var botUrl=req.body["url"]
     var botToken=req.body["token"]
-    //https://test.cbot.ai/jirabot    ====> url
-    //Vrn9QVR7gVRPJtXiuk5YdKmY6eYtGNiDA5W6FdBBr0hSOA8glNlQGahMSNu1LBC7   ===> token
     try {
         var botResp=await sendRequest(botUrl,botToken,str)
         botResp= mrkdwn(botResp.message[0].message); 
