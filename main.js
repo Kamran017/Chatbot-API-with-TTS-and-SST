@@ -34,8 +34,24 @@
   // If false, the recording will stop after a few seconds of silence.
   // When true, the silence period is longer (about 15 seconds),
   // allowing us to keep recording even when the user pauses. 
-  recognition.continuous = true;
-  recognition.lang="tr-TR"
+  // select language for voice recognition from dropdown menu
+  $('#approveLang').on('click', function(e) {
+    var lng=$("#langs :selected").val();
+    // control language codes from dropdown menu
+    if(lng =="germany"){
+      recognition.lang="de-DE";
+    } 
+    else if(lng =="spanish"){
+        recognition.lang='es-Es';
+    } 
+    else if(lng=="english"){
+        recognition.lang="en-US";
+    } 
+    else if(lng =="turkish"){
+      recognition.lang="tr-TR";
+    } 
+    recognition.continuous = true;
+  });
 
   // This block is called every time the Speech APi captures a line. 
   recognition.onresult = function(event) {
