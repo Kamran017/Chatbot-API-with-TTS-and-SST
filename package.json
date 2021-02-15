@@ -1,0 +1,36 @@
+{
+  "name": "Chatbot-API-with-TTS-and-SST",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "@google-cloud/speech": "^4.2.0",
+    "async": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "gtts": "^0.2.1",
+    "html-to-mrkdwn": "^3.0.0",
+    "lodash": "^4.17.20",
+    "protobufjs": "^6.10.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "tmp": "^0.2.1",
+    "tough-cookie": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kamran017/Chatbot-API-with-TTS-and-SST.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kamran017/Chatbot-API-with-TTS-and-SST/issues"
+  },
+  "homepage": "https://github.com/Kamran017/Chatbot-API-with-TTS-and-SST#readme"
+}
