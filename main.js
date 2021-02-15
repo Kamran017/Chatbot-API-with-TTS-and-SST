@@ -88,7 +88,7 @@
   
   //send request to nodejs 
   
-  let url="http://localhost:8000/sendRequest"
+  let url="https://devadmin.cbot.ai:8443/sendRequest"
 
   recognition.onspeechend=function(){
     console.log(noteContent)
@@ -101,7 +101,7 @@
       saveNote(new Date().toLocaleString(), data);
       lng=$("#langs :selected").val(); // The value of the selected option
       console.log(lng)
-      new Audio("http://localhost:8000/speech?text="+data+"&lang="+lng).play()
+      new Audio("https://devadmin.cbot.ai:8443/speech?text="+data+"&lang="+lng).play()
     });
     
   }
